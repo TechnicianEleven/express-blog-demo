@@ -1,0 +1,9 @@
+body{
+    font-family: "微软雅黑"
+}
+.main{
+    margin-top: 60px;
+}
+.form-group input{
+    display: inline-block;
+}

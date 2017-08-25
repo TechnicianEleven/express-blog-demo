@@ -1,0 +1,61 @@
+doctype html
+html
+  head
+    title my jade template
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/bootstrap.css")
+    link(rel="stylesheet", href="css/reset.css")
+    script(src="javascripts/jquery.js")
+    script(src="javascripts/bootstrap.js")
+
+  body
+    //- - if (messages.info)
+    //-   .message.info
+    //- h1="hello"
+    //-     span(style="background:green;font-size:60px;color:#fff")= messages.info
+    nav(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+
+        div(class="container")
+            div(class="navbar-header")
+                button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-items" aria-expanded="false")
+                    span(class="sr-only")="Toggle navigation"
+                    span(class="icon-bar")
+                    span(class="icon-bar")
+                    span(class="icon-bar") 
+                       
+                a(href="javascript:;" class="navbar-brand ")="Welcome"
+
+            
+            div(class="navbar-collapse collapse navbar-right" id="my-navbar-items")
+                ul(class="nav navbar-nav")
+                  -if (user)
+                    .user.name
+                    li(class="active") 
+                      a(href="javascript:;" class="navbar-brand")=user.name
+                    li
+                      a(href="/logout") 登出
+                  -else
+                    li(class="active")
+                      a(href="/reg")  注册 
+                      span(class="sr-only")
+                    li
+                      a(href="/login")  登录
+                  -    
+    
+    div(class="main container")
+      article
+        form(action="" method="post")
+          div(class="form-group")
+            div(class="col-md-8 col-md-offset-1") 
+              input(type="text"  class="form-control" name="content" )
+            div(class="col-md-2")  
+              input(type="submit"  class="btn btn-primary" name="publish" value="发表" )          
+
+                   
+
+    
+
+    
+    
+    
+  

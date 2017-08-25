@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title my jade template
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/bootstrap.css")
+    link(rel="stylesheet", href="css/reset.css")
+    link(rel="stylesheet", href="css/login.css")
+    script(src="javascripts/jquery.js")
+    script(src="javascripts/bootstrap.js")
+
+  body
+  div(class="col-md-12")
+    div(class="panel panel-primary")
+      div(class="panel-heading")
+        span(class="glyphicon glyphicon-tree-conifer")
+        span=" Register"
+      div(class="panel-body")
+        form(action="" method="post")
+          div(class="form-group")
+            <label for="exampleInputEmail1">name:</label>
+            input(type="text"  class="form-control" name="username" place)
+          div(class="form-group")      
+            <label for="exampleInputEmail1">password:</label>
+            input(type="password" class="form-control" name="password")
+          div(class="form-group")      
+            <label for="exampleInputEmail1">password-repeat:</label>
+            input(type="password" class="form-control" name="password-repeat")  
+          div(class="form-group")      
+            input(type="submit" class="btn btn-primary " name="Reg") 
+      
+

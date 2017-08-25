@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title my jade template
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src="../javascripts/jquery.js")
+     
+
+  body  
+
+    - for (var i = 0; i < posts.length; ++i) {
+      div(class="demo")
+        p(class="num") #{posts[i].id}  
+        p #{posts[i].user}
+        p #{posts[i].post}
+        p #{posts[i].time}
+        button(onclick="del('client post','post')")  del
+    - }
+    -if (user)
+      .user.name
+      li
+      a(href="javascript:;")=user.name
+    -
+    p 文章   
+  script(src="../javascripts/del.js") 
+    
